@@ -4,6 +4,7 @@
   getTag,           // document.getElementsByTagName()
   getClass,         // document.getElementsByClassName()
   getName,          // document.getElementsByName()
+  getEl,            // document.querySlector()
   createEl,         // document.createElement()
   setItem,          // localStorage.setItem()
   setAttributes,    // Set multiple attributes to one element
@@ -15,15 +16,18 @@
   this.getId = function(a) {
     return document.getElementById(a)
   }, this.getTag = function(a) {
-    return document.getElementsByTagName(a)[0]
+       return document.getElementsByTagName(a)[0]
   }, this.getClass = function(a, i) {
-    return document.getElementsByClassName(a)[i]
+       return document.getElementsByClassName(a)[i]
   }, this.getName = function(a) {
-    return document.getElementsByName(a)[0]
-  }, this.createEl = function(a) {
-    return document.createElement(a)
+       return document.getElementsByName(a)[0]
+  }, this.geEl = function(a) {
+       return document.querySlector(a)
+  },   
+    this.createEl = function(a) {
+      return document.createElement(a)
   }, this.setItem = function(a, b) {
-    return localStorage.setItem(a, b)
+      return localStorage.setItem(a, b)
   }, this.setAttributes = function (el, attrs) {
     for(var key in attrs) {
       el.setAttribute(key, attrs[key]);
